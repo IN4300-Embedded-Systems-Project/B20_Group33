@@ -91,17 +91,4 @@ void loop()
     else
       val = 0;
   }
-  while (val == '6' && pos3 > 5)
-  {
-    digitalWrite(13, HIGH);
-    pos3 -= 5;
-    servo3.write(pos3);
-    delay(pauseTime);
-    if (Serial.available())
-      val = Serial.read();
-    else
-      val = 0;
-  }
-
-  digitalWrite(13, LOW);
 }
