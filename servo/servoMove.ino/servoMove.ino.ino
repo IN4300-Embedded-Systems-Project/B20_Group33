@@ -9,10 +9,10 @@ void setup() {
   pinMode(13, OUTPUT);
   Serial.begin(9600);
 
-  servo1.attach(5);  
-  servo2.attach(6);  
-  servo3.attach(9);  
-  servo4.attach(10); 
+  servo1.attach(5);
+  servo2.attach(6);
+  servo3.attach(9);
+  servo4.attach(10);
 
   servo1.write(0);
   servo2.write(90);
@@ -78,24 +78,6 @@ void loop() {
     digitalWrite(13, HIGH);
     pos3 -= 5;
     servo3.write(pos3);
-    delay(pauseTime);
-    if (Serial.available()) val = Serial.read();
-    else val = 0;
-  }
-
-  // Move servo4 (pin 10)
-  while (val == '8' && pos4 < 180) {
-    digitalWrite(13, HIGH);
-    pos4 += 5;
-    servo4.write(pos4);
-    delay(pauseTime);
-    if (Serial.available()) val = Serial.read();
-    else val = 0;
-  }
-  while (val == '7' && pos4 > 0) {
-    digitalWrite(13, HIGH);
-    pos4 -= 5;
-    servo4.write(pos4);
     delay(pauseTime);
     if (Serial.available()) val = Serial.read();
     else val = 0;
