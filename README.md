@@ -7,11 +7,13 @@ A robotic arm project built using Arduino UNO and servo motors, featuring remote
 ## Components Used
 
 - Arduino UNO
-- 4x MG-90 Servo Motors
+- 4x MG-90S Servo Motors
 - Geared Motors
-- Bluetooth Module
+- HC-06 Bluetooth Module
+- Logic level converter
+- DC step down motor
 - Power Supply
-- Connecting Wires
-- Chassis/Frame Materials
+- Jumper Cables
+- Woodern Arm Frame
 
 ## Circuit Diagram
