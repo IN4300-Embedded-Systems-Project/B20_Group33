@@ -2,9 +2,10 @@
 
 Servo servo1, servo2, servo3, servo4;
 int val = 0;
-int speed1 = 90, speed2 = 90, speed3 = 90, speed4 = 90; 
-int pauseTime = 75; 
-void setup() {
+int speed1 = 90, speed2 = 90, speed3 = 90, speed4 = 90;
+int pauseTime = 75;
+void setup()
+{
   pinMode(13, OUTPUT);
   Serial.begin(9600);
 
@@ -13,87 +14,113 @@ void setup() {
   servo3.attach(9);
   servo4.attach(10);
 
-  
   servo1.write(90);
   servo2.write(90);
   servo3.write(90);
   servo4.write(90);
 }
 
-void loop() {
-  if (Serial.available()) {
+void loop()
+{
+  if (Serial.available())
+  {
     val = Serial.read();
     Serial.println(val);
-  } else {
-    val = 0; 
+  }
+  else
+  {
+    val = 0;
   }
 
-  while (val == '1') {
+  while (val == '1')
+  {
     digitalWrite(13, HIGH);
-    servo1.write(180); 
+    servo1.write(180);
     delay(pauseTime);
-    if (Serial.available()) val = Serial.read();
-    else val = 0;
+    if (Serial.available())
+      val = Serial.read();
+    else
+      val = 0;
   }
-  while (val == '2') {
+  while (val == '2')
+  {
     digitalWrite(13, HIGH);
     servo1.write(0);
     delay(pauseTime);
-    if (Serial.available()) val = Serial.read();
-    else val = 0;
+    if (Serial.available())
+      val = Serial.read();
+    else
+      val = 0;
   }
 
-
-  while (val == '3') {
+  while (val == '3')
+  {
     digitalWrite(13, HIGH);
-    servo2.write(180); 
+    servo2.write(180);
     delay(pauseTime);
-    if (Serial.available()) val = Serial.read();
-    else val = 0;
+    if (Serial.available())
+      val = Serial.read();
+    else
+      val = 0;
   }
-  while (val == '4') {
+  while (val == '4')
+  {
     digitalWrite(13, HIGH);
-    servo2.write(0); 
+    servo2.write(0);
     delay(pauseTime);
-    if (Serial.available()) val = Serial.read();
-    else val = 0;
+    if (Serial.available())
+      val = Serial.read();
+    else
+      val = 0;
   }
 
-  while (val == '5') {
+  while (val == '5')
+  {
     digitalWrite(13, HIGH);
-    servo3.write(180); 
+    servo3.write(180);
     delay(pauseTime);
-    if (Serial.available()) val = Serial.read();
-    else val = 0;
+    if (Serial.available())
+      val = Serial.read();
+    else
+      val = 0;
   }
-  while (val == '6') {
+  while (val == '6')
+  {
     digitalWrite(13, HIGH);
-    servo3.write(0); 
+    servo3.write(0);
     delay(pauseTime);
-    if (Serial.available()) val = Serial.read();
-    else val = 0;
+    if (Serial.available())
+      val = Serial.read();
+    else
+      val = 0;
   }
 
-  while (val == '7') {
+  while (val == '7')
+  {
     digitalWrite(13, HIGH);
-    servo4.write(180); 
-    if (Serial.available()) val = Serial.read();
-    else val = 0;
+    servo4.write(180);
+    if (Serial.available())
+      val = Serial.read();
+    else
+      val = 0;
   }
-  while (val == '8') {
+  while (val == '8')
+  {
     digitalWrite(13, HIGH);
-    servo4.write(0); 
+    servo4.write(0);
     delay(pauseTime);
-    if (Serial.available()) val = Serial.read();
-    else val = 0;
+    if (Serial.available())
+      val = Serial.read();
+    else
+      val = 0;
   }
 
-
-  if (val == '0') {
+  if (val == '0')
+  {
     servo1.write(90);
     servo2.write(90);
     servo3.write(90);
     servo4.write(90);
-    digitalWrite(13, LOW); 
+    digitalWrite(13, LOW);
   }
 }
