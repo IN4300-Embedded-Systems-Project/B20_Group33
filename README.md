@@ -17,3 +17,10 @@ A robotic arm project built using Arduino UNO and servo motors, featuring remote
 - Woodern Arm Frame
 
 ## Circuit Diagram
+![WhatsApp Image 2025-02-26 at 10 05 46 PM](https://github.com/user-attachments/assets/db2079bc-a77b-4c75-b4a1-786b47a9e410)
+
+## Bill
+![WhatsApp Image 2025-02-26 at 10 20 14 PM](https://github.com/user-attachments/assets/17885caa-af5f-496d-a810-37afcc17cac9)
+
+
+
