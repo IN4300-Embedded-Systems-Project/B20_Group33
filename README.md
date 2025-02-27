@@ -18,5 +18,5 @@ A robotic arm project built using Arduino UNO and servo motors, featuring remote
 
 ## Circuit Diagram
 
-
+![Image](https://github.com/user-attachments/assets/d69a49c5-34c4-47b0-b3a2-dc501167817e)
 
